@@ -6,7 +6,7 @@ export default function Index() {
     <View style={styles.backgroundView}>
 
       <Text style={styles.text}>
-        Million of songs.
+        Millions of songs.
        
       </Text>
 
@@ -33,7 +33,9 @@ const styles = StyleSheet.create({
     color: 'white',  
     textAlign: 'center',  
     marginBottom: 20, 
-    fontSize:30
+    fontSize:30,
+    fontWeight:600,
+    paddingTop:180
 
   },
 
@@ -42,10 +44,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',  
     marginBottom: 20, 
     fontSize:30,
-    marginTop:-20
+    marginTop:-20,
+    fontWeight:600
   },
   spotifyLogo: {
     width: 50,
-    height: 50
+    height: 50,
+    bottom:170
   }
 });
