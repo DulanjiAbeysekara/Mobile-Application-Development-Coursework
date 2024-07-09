@@ -31,10 +31,10 @@ export default function Index() {
 
       <TouchableOpacity style={[styles.button, styles.facebookBtn]}>
         <Image
-          style={styles.googleLogo}
-          source={require('../assets/images/google.png')}
+          style={styles.facebookLogo}
+          source={require('../assets/images/facebook (1).png')}
         />
-        <Text style={styles.googleText}>Continue with Facebook</Text>
+        <Text style={styles.facebookText}>Continue with Facebook</Text>
       </TouchableOpacity>
     </View>
   );
@@ -103,7 +103,22 @@ const styles = StyleSheet.create({
     right:30,
   },
   facebookBtn: {
-    
+    borderColor: 'white',
+    borderWidth: 0.5,
+    flexDirection: 'row', 
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  facebookText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
+  facebookLogo: {
+    width: 20,
+    height: 20,
+    right:25,
   }
 
 });
