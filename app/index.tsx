@@ -4,6 +4,7 @@ import React from 'react'
 export default function Index() {
   return (
     <View style={styles.backgroundView2}>
+        
       <Text style={styles.topic2}>Create account</Text>
       <Text style={styles.topic}>What's your date of birth?</Text>
       <TextInput style={styles.inputFeild} placeholder="MM/DD/YYYY" placeholderTextColor="gray" />
