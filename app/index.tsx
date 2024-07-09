@@ -1,13 +1,19 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput,TouchableOpacity } from 'react-native'
 import React from 'react'
 
 export default function Index() {
   return (
     <View style={styles.backgroundView2}>
-        
+
       <Text style={styles.topic2}>Create account</Text>
+
       <Text style={styles.topic}>What's your date of birth?</Text>
+
       <TextInput style={styles.inputFeild} placeholder="MM/DD/YYYY" placeholderTextColor="gray" />
+
+      <TouchableOpacity style={styles.nextBtn1} >
+        <Text style={styles.nextBtnText}>Next</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -49,4 +55,21 @@ const styles = StyleSheet.create({
     alignSelf: 'center', 
     backgroundColor: '#848884',
   },
+  nextBtn1:{
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    width: 75,
+    alignItems: 'center',
+    marginTop: 85,
+    backgroundColor:'white',
+    fontWeight: 'bold',
+    left:160,
+    
+  },
+  nextBtnText:{
+    fontWeight: 'bold', 
+    color: 'black', 
+  }
+  
 })
