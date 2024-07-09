@@ -17,8 +17,24 @@ export default function Index() {
         Free on Spotify.
       </Text> 
 
-      <TouchableOpacity style={styles.signUpBtn}>
+      <TouchableOpacity style={[styles.button, styles.signUpBtn]}>
         <Text style={styles.signUpText}>Sign up for free</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, styles.googleBtn]}>
+        <Image
+          style={styles.googleLogo}
+          source={require('../assets/images/google.png')}
+        />
+        <Text style={styles.googleText}>Continue with Google</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, styles.facebookBtn]}>
+        <Image
+          style={styles.googleLogo}
+          source={require('../assets/images/google.png')}
+        />
+        <Text style={styles.googleText}>Continue with Facebook</Text>
       </TouchableOpacity>
     </View>
   );
@@ -34,7 +50,7 @@ const styles = StyleSheet.create({
   spotifyLogo: {
     width: 50,
     height: 50,
-    marginTop: 180,
+    marginTop: 120,
     marginBottom: 20,
   },
   text: {
@@ -52,17 +68,42 @@ const styles = StyleSheet.create({
     marginTop: -10,
     fontWeight: '600',
   },
-  signUpBtn: {
-    backgroundColor: '#06D001',
+  button: {
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 50,
     width: 300,
     alignItems: 'center',
+    marginTop: 10,
+  },
+  signUpBtn: {
+    backgroundColor: '#059212',
   },
   signUpText: {
     color: 'black',
     fontSize: 16,
     fontWeight: 'bold',
   },
+  googleBtn: {
+    borderColor: 'white',
+    borderWidth: 0.5,
+    flexDirection: 'row', 
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  googleText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
+  googleLogo: {
+    width: 20,
+    height: 20,
+    right:30,
+  },
+  facebookBtn: {
+    
+  }
+
 });
