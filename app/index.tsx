@@ -42,7 +42,7 @@ export default function Index() {
           style={styles.appleLogo}
           source={require('../assets/images/apple.png')}
         />
-        <Text style={styles.appleText}>Continue with Facebook</Text>
+        <Text style={styles.appleText}>Continue with Apple</Text>
       </TouchableOpacity>
 
       <Text style={styles.loginText}>
