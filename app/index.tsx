@@ -36,6 +36,19 @@ export default function Index() {
         />
         <Text style={styles.facebookText}>Continue with Facebook</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, styles.appleBtn]}>
+        <Image
+          style={styles.appleLogo}
+          source={require('../assets/images/apple.png')}
+        />
+        <Text style={styles.appleText}>Continue with Facebook</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.loginText}>
+       Login
+      </Text>
+
     </View>
   );
 }
@@ -74,7 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 300,
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 8,
   },
   signUpBtn: {
     backgroundColor: '#059212',
@@ -119,6 +132,33 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     right:25,
-  }
+  },
 
+  appleBtn: {
+    borderColor: 'white',
+    borderWidth: 0.5,
+    flexDirection: 'row', 
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  appleText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
+  
+  appleLogo: {
+    width: 20,
+    height: 20,
+    right:25,
+  },
+
+  loginText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop:8,
+  }
 });
