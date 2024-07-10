@@ -1,6 +1,6 @@
 import React, { useState,useEffect  } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker'; // Import DateTimePickerEvent
+import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker'; 
 
 export default function Index() {
   return (

@@ -1,32 +1,85 @@
-import React, { useState,useEffect  } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker'; // Import DateTimePickerEvent
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Dropdown } from 'react-native-element-dropdown';
 
-export default function Index() {
+const data = [
+  { label: 'Male', value: '1' },
+  { label: 'Female', value: '2' },
+  { label: 'Prefer not to say', value: '3' },
+];
+
+const DropdownComponent = () => {
+  const [value, setValue] = useState(null);
+  const [isFocus, setIsFocus] = useState(false);
+
   return (
-    <View style={styles.backgroundView2}>
+    <View style={styles.container}>
       <Text style={styles.topic2}>Create account</Text>
-
-      <Text style={styles.topic}>What's your date of birth?</Text>
-
-      <TextInput style={styles.inputFeild} placeholder="MM/DD/YYYY" placeholderTextColor="white"/>
-
-
+      <Text style={styles.topic}>What's your gender?</Text>
+      <Dropdown
+        style={[styles.dropdown, isFocus && { borderColor: 'grey' }]}
+        placeholderStyle={styles.placeholderStyle}
+        selectedTextStyle={styles.selectedTextStyle}
+        inputSearchStyle={styles.inputSearchStyle}
+        iconStyle={styles.iconStyle}
+        data={data}
+        maxHeight={300}
+        labelField="label"
+        valueField="value"
+        placeholder="Gender"
+        value={value}
+        onFocus={() => setIsFocus(true)}
+        onBlur={() => setIsFocus(false)}
+        onChange={item => {
+          setValue(item.value);
+          setIsFocus(false);
+        }}
+      />
       <TouchableOpacity style={styles.nextBtn1}>
         <Text style={styles.nextBtnText}>Next</Text>
       </TouchableOpacity>
-    
     </View>
-  ); 
-}
+  );
+};
+
+export default DropdownComponent;
 
 const styles = StyleSheet.create({
-  backgroundView2: {
+  container: {
     flex: 1,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     margin: 10,
     backgroundColor: 'black',
+  },
+  dropdown: {
+    height: 40,
+    width: '90%',
+    borderColor: '#848884',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    color: 'white',
+    marginTop: 10,
+    alignSelf: 'center',
+    backgroundColor: '#848884',
+  },
+  placeholderStyle: {
+    fontSize: 16,
+    color: 'white',  
+  },
+  selectedTextStyle: {
+    fontSize: 16,
+    color: 'white', 
+  },
+  iconStyle: {
+    width: 20,
+    height: 20,
+    backgroundColor: 'black',
+  },
+  inputSearchStyle: {
+    height: 40,
+    fontSize: 16,
   },
   topic2: {
     fontSize: 15,
@@ -45,18 +98,6 @@ const styles = StyleSheet.create({
     left: 15,
     top: 30,
   },
-  inputFeild: {
-    height: 40,
-    width: '90%',
-    borderColor: '#848884',
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    color: 'white',
-    marginTop: 10,
-    alignSelf: 'center',
-    backgroundColor: '#848884',
-  },
   nextBtn1: {
     paddingVertical: 10,
     paddingHorizontal: 20,
@@ -66,7 +107,7 @@ const styles = StyleSheet.create({
     marginTop: 85,
     backgroundColor: 'white',
     fontWeight: 'bold',
-    left: 140,
+    left: 155,
   },
   nextBtnText: {
     fontWeight: 'bold',
