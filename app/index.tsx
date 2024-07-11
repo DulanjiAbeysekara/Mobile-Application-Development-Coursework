@@ -18,6 +18,15 @@ export default function Index() {
 
       <View style={styles.line} />
 
+      <Text style={styles.topic4}>By tapping on ‘Create account’, you agree to the Spotify Terms of Use.</Text>
+
+      <Text style={styles.linkText}>Terms of Use</Text>
+
+      <Text style={styles.agreementText}>To learn more about how Spotify collects, uses, shares and protects<br></br>
+      your personal data, please see the Spotify Privacy Policy. </Text>
+      <Text style={styles.linkText}>Privacy Policy</Text>
+
+      <Text style={styles.agreementText}>I would prefer not to receive marketing messages from Spotify.</Text>
     </View>
   )
 }
@@ -66,7 +75,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#848884',
   },
   line: {
-    height: 0.5,
+    height: 0.1,
     width: '85%',
     backgroundColor: '#848884',
     alignSelf: 'center',
@@ -80,5 +89,30 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     left: 18,
     top: 5,
+  },
+  topic4: {
+    fontSize: 10,
+    color: 'white',
+    textAlign: 'left',
+    fontWeight: '300',
+    marginBottom: 25,
+    left: 24,
+    top: 15,
+  },
+  linkText: {
+    fontSize: 10,
+    color: '#059212',
+    textAlign: 'left',
+    fontWeight: '400',
+    left: 24,
+  },
+  agreementText: {
+    fontSize: 10,
+    color: 'white',
+    textAlign: 'left',
+    fontWeight: '300',
+    marginBottom: 25,
+    left: 24,
+    top: 15,
   },
 })
