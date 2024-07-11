@@ -1,7 +1,26 @@
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image, TextInput,TouchableOpacity } from 'react-native';
+import React, { useMemo, useState } from 'react';
+import RadioGroup from 'react-native-radio-buttons-group';
 
 export default function Index() {
+  const radioButtons = useMemo(
+    () => [
+      {
+        id: '1', // acts as primary key, should be unique and non-empty string
+        // label: 'Option 1',
+        value: 'option1',
+      },
+      {
+        id: '2', // acts as primary key, should be unique and non-empty string
+        // label: 'Option 1',
+        value: 'option1',
+      },
+    ],
+    []
+  );
+
+  const [selectedId, setSelectedId] = useState();
+
   return (
     <View style={styles.backgroundView2}>
       <Image
@@ -18,17 +37,37 @@ export default function Index() {
 
       <View style={styles.line} />
 
-      <Text style={styles.topic4}>By tapping on ‘Create account’, you agree to the Spotify Terms of Use.</Text>
+      <Text style={styles.topic4}>
+        By tapping on ‘Create account’, you agree to the Spotify Terms of Use.
+      </Text>
 
       <Text style={styles.linkText}>Terms of Use</Text>
 
-      <Text style={styles.agreementText}>To learn more about how Spotify collects, uses, shares and protects<br></br>
-      your personal data, please see the Spotify Privacy Policy. </Text>
+      <Text style={styles.agreementText}>
+        To learn more about how Spotify collects, uses, shares and protects
+        your personal data, please see the Spotify Privacy Policy.
+      </Text>
       <Text style={styles.linkText}>Privacy Policy</Text>
 
-      <Text style={styles.agreementText}>I would prefer not to receive marketing messages from Spotify.</Text>
+      <Text style={styles.agreementText}>
+        I would prefer not to receive marketing messages from Spotify.
+      </Text>
+
+      <Text style={styles.agreementText}>Share my registration data with Spotify’s content providers for
+        <br></br> marketing purposes.</Text>
+
+      <RadioGroup
+        radioButtons={radioButtons}
+        onPress={setSelectedId}
+        selectedId={selectedId}
+        containerStyle={styles.radioButtonContainer}
+      />
+
+        <TouchableOpacity style={styles.nextBtn1}>
+        <Text style={styles.nextBtnText}>Create account</Text>
+      </TouchableOpacity>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -115,4 +154,24 @@ const styles = StyleSheet.create({
     left: 24,
     top: 15,
   },
-})
+  radioButtonContainer: {
+    left: 300,
+    marginTop: -80,
+  },
+
+  nextBtn1: {
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    width: 150,
+    alignItems: 'center',
+    marginTop: 85,
+    backgroundColor: 'white',
+    fontWeight: 'bold',
+    left: 100,
+  },
+  nextBtnText: {
+    fontWeight: 'bold',
+    color: 'black',
+  },
+});
