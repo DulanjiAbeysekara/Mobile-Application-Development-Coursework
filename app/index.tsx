@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet,Image} from 'react-native'
+import { View, Text,StyleSheet,Image,TextInput} from 'react-native'
 import React from 'react'
 
 export default function index() {
@@ -11,6 +11,9 @@ export default function index() {
       <Text style={styles.topic2}>Create account</Text>
 
       <Text style={styles.topic}>What's your name?</Text>
+
+      <TextInput style={styles.inputFeild} />
+
 
     </View>
   )
@@ -47,5 +50,17 @@ const styles=StyleSheet.create({
         marginBottom: 25,
         left: 15,
         top: 30,
+      },
+      inputFeild: {
+        height: 40,
+        width: '90%',
+        borderColor: '#848884',
+        borderWidth: 1,
+        borderRadius: 5,
+        paddingHorizontal: 10,
+        color: 'white',
+        marginTop: 10,
+        alignSelf: 'center',
+        backgroundColor: '#848884',
       },
 })
