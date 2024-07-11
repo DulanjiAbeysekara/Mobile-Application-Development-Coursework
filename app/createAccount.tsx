@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     marginTop: 85,
     backgroundColor: 'white',
     fontWeight: 'bold',
-    left: 155,
+    left: 140,
   },
   nextBtnText: {
     fontWeight: 'bold',
