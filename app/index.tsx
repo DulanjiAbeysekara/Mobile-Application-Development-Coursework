@@ -14,6 +14,9 @@ export default function index() {
 
       <TextInput style={styles.inputFeild} />
 
+      <Text style={styles.topic3}>This appearn on your Spotify profile.</Text>
+
+      
 
     </View>
   )
@@ -63,4 +66,13 @@ const styles=StyleSheet.create({
         alignSelf: 'center',
         backgroundColor: '#848884',
       },
+      topic3: {
+        fontSize: 10,
+        color: 'white',
+        textAlign: 'left',
+        fontWeight: '300',
+        marginBottom: 25,
+        left: 18,
+        top: 5,
+      }
 })
