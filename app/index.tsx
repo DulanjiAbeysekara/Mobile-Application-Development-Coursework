@@ -1,4 +1,4 @@
-import { View, Text ,StyleSheet,Button,TouchableOpacity} from 'react-native'
+import { View, Text ,StyleSheet,Button,TouchableOpacity,Image} from 'react-native'
 import React from 'react'
 
 export default function index() {
@@ -17,8 +17,33 @@ export default function index() {
         <Text style={styles.nextButotn3Text}> Music</Text>
       </TouchableOpacity>
 
-      
-     
+      <Image
+        style={styles.tinyLogo}
+        source={require('../assets/images/home (6).png')}
+        
+      />
+       <Text style={styles.homeText}> Home</Text>
+
+      <Image
+        style={styles.tinyLogo2}
+        source={require('../assets/images/search.png')}
+      />
+      <Text style={styles.searchText}> Search</Text>
+
+        <Image
+        style={styles.tinyLogo3}
+        source={require('../assets/images/library.png')}
+      />
+
+      <Text style={styles.libraryText}> Your Library</Text>
+
+    <Image
+        style={styles.tinyLogo4}
+        source={require('../assets/images/Spotify_Primary_Logo_RGB_White.png')}
+      />
+
+    <Text style={styles.premiumText}>Premium</Text>
+
     </View>
   )
 }
@@ -53,7 +78,7 @@ const styles=StyleSheet.create({
 
     },
 
-    btn2:{
+  btn2:{
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderRadius: 75,
@@ -66,7 +91,7 @@ const styles=StyleSheet.create({
         },
     
         nextBtn2Text:{
-         color: 'white',
+         color: 'black',
         fontSize: 18,
         fontWeight: '400',
         bottom:27,
@@ -92,4 +117,57 @@ const styles=StyleSheet.create({
             right:2,
         },
     
+        tinyLogo:{
+            width:28,
+            height:28,
+            left:22,
+            top:440
+        },
+        homeText:{
+          color: 'white',
+          fontSize: 12,
+          fontWeight: '300',
+          top:440,
+          left:17
+
+        },
+        tinyLogo2:{
+          width:28,
+          height:28,
+          left:115,
+          top:398
+        },
+        searchText:{
+          color: 'white',
+          fontSize: 12,
+          fontWeight: '300',
+          top:398,
+          left:110
+        },
+        tinyLogo3:{
+          width:28,
+          height:28,
+          left:208,
+          top:355
+        },
+        libraryText:{
+          color: 'white',
+          fontSize: 12,
+          fontWeight: '300',
+          top:355,
+          left:190
+        },
+        tinyLogo4:{
+          width:28,
+          height:28,
+          left:295,
+          top:310
+        },
+        premiumText:{
+          color: 'white',
+          fontSize: 12,
+          fontWeight: '300',
+          top:312,
+          left:288,
+        }
 })
