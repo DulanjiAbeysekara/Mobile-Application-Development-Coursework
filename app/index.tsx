@@ -5,6 +5,7 @@ import SignUpPage from '@/components/Pages/SignUpPage/SignUp'
 import GenderPage from '@/components/Pages/GenderPage/Gender';
 import CreateAccount from '@/components/Pages/CreateAccontPage/CreateAccount';
 import Name from '@/components/Pages/NamePage/Name';
+import HomePage from '@/components/Pages/HomePage/HomePage';
 
 const Stack = createStackNavigator(); 
 
@@ -33,6 +34,11 @@ export default function Index() {
         <Stack.Screen 
           name='Name-Page' 
           component={Name} 
+        />
+
+          <Stack.Screen 
+          name='Home-Page' 
+          component={HomePage} 
         />
       </Stack.Navigator>
     </NavigationContainer>

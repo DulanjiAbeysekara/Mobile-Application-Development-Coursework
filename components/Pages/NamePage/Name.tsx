@@ -1,8 +1,12 @@
 import { View, Text, StyleSheet, Image, TextInput,TouchableOpacity } from 'react-native';
 import React, { useMemo, useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function Name() {
+  const navigation = useNavigation();
+
   const radioButtons = useMemo(
     () => [
       {
@@ -21,10 +25,14 @@ export default function Name() {
 
   return (
     <View style={styles.backgroundView2}>
+
+      <Pressable>
       <Image
         style={styles.spotifyLogo}
         source={require('../../../assets/images/left.png')}
       />
+      </Pressable>
+      
       <Text style={styles.topic2}>Create account</Text>
 
       <Text style={styles.topic}>What's your name?</Text>
@@ -61,7 +69,8 @@ export default function Name() {
         containerStyle={styles.radioButtonContainer}
       />
 
-        <TouchableOpacity style={styles.nextBtn1}>
+        <TouchableOpacity style={styles.nextBtn1}
+        onPress={() => navigation.navigate('Home-Page')}>
         <Text style={styles.nextBtnText}>Create account</Text>
       </TouchableOpacity>
     </View>
