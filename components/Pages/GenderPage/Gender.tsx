@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -12,6 +11,8 @@ const data = [
 const DropdownComponent = () => {
   const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(false);
+
+  // const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -36,7 +37,10 @@ const DropdownComponent = () => {
           setIsFocus(false);
         }}
       />
-      <TouchableOpacity style={styles.nextBtn1}>
+      <TouchableOpacity 
+        style={styles.nextBtn1}
+     
+      >
         <Text style={styles.nextBtnText}>Next</Text>
       </TouchableOpacity>
     </View>
@@ -48,8 +52,8 @@ export default DropdownComponent;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    alignItems: 'center',
+    justifyContent: 'center',
     margin: 10,
     backgroundColor: 'black',
   },
@@ -62,16 +66,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     color: 'white',
     marginTop: 10,
-    alignSelf: 'center',
     backgroundColor: '#848884',
   },
   placeholderStyle: {
     fontSize: 16,
-    color: 'white',  
+    color: 'white',
   },
   selectedTextStyle: {
     fontSize: 16,
-    color: 'white', 
+    color: 'white',
   },
   iconStyle: {
     width: 20,
@@ -87,17 +90,14 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontWeight: '600',
-    top: 5,
-    left: 140,
+    marginBottom: 10,
   },
   topic: {
     fontSize: 20,
     color: 'white',
-    textAlign: 'left',
+    textAlign: 'center',
     fontWeight: '600',
     marginBottom: 25,
-    left: 15,
-    top: 30,
   },
   nextBtn1: {
     paddingVertical: 10,
@@ -105,10 +105,8 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 75,
     alignItems: 'center',
-    marginTop: 85,
     backgroundColor: 'white',
-    fontWeight: 'bold',
-    left: 140,
+    marginTop: 20,
   },
   nextBtnText: {
     fontWeight: 'bold',

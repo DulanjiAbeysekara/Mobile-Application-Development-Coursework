@@ -1,30 +1,49 @@
-import React, { useState,useEffect  } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker'; 
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Platform } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import { router } from 'expo-router';
+import { useNavigation } from '@react-navigation/native';
 
 export default function CreateAccount() {
+  const [date, setDate] = useState(new Date());
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShow(Platform.OS === 'ios'); // Keep the picker open on iOS, close on Android
+    setDate(currentDate);
+  };
+
+  const showDatePicker = () => {
+    setShow(true);
+  };
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.backgroundView2}>
-      <Text style={styles.topic2}>Create account</Text>
+    <Text style={styles.topic2}>Create account</Text>
 
-      <Text style={styles.topic}>What's your date of birth?</Text>
+    <Text style={styles.topic}>What's your date of birth?</Text>
 
-      <TextInput style={styles.inputFeild} placeholder="MM/DD/YYYY" placeholderTextColor="white"/>
+    <TextInput style={styles.inputFeild} placeholder="MM/DD/YYYY" placeholderTextColor="white"/>
 
 
-      <TouchableOpacity style={styles.nextBtn1}>
-        <Text style={styles.nextBtnText}>Next</Text>
-      </TouchableOpacity>
-    
-    </View>
-  ); 
+    <TouchableOpacity style={styles.nextBtn1} 
+      onPress={() => navigation.navigate('Gender-Page')
+        }>
+      <Text style={styles.nextBtnText}>Next</Text>
+    </TouchableOpacity>
+  
+  </View>
+  );
 }
 
 const styles = StyleSheet.create({
   backgroundView2: {
     flex: 1,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    alignItems: 'center',
+    justifyContent: 'center',
     margin: 10,
     backgroundColor: 'black',
   },
@@ -33,17 +52,14 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontWeight: '600',
-    top: 5,
-    left: 124,
+    marginBottom: 10,
   },
   topic: {
     fontSize: 20,
     color: 'white',
-    textAlign: 'left',
+    textAlign: 'center',
     fontWeight: '600',
     marginBottom: 25,
-    left: 15,
-    top: 30,
   },
   inputFeild: {
     height: 40,
@@ -54,7 +70,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     color: 'white',
     marginTop: 10,
-    alignSelf: 'center',
     backgroundColor: '#848884',
   },
   nextBtn1: {
@@ -63,14 +78,11 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 75,
     alignItems: 'center',
-    marginTop: 85,
+    marginTop: 20,
     backgroundColor: 'white',
-    fontWeight: 'bold',
-    left: 140,
   },
   nextBtnText: {
     fontWeight: 'bold',
     color: 'black',
   },
 });
-
