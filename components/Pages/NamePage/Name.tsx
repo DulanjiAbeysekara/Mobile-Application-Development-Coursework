@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TextInput,TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput,TouchableOpacity ,Pressable} from 'react-native';
 import React, { useMemo, useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 import { useNavigation } from '@react-navigation/native';
@@ -26,13 +26,14 @@ export default function Name() {
   return (
     <View style={styles.backgroundView2}>
 
-      <Pressable>
+      <Pressable  
+      onPress={() => navigation.navigate('Gender-Page')}>
       <Image
         style={styles.spotifyLogo}
         source={require('../../../assets/images/left.png')}
       />
       </Pressable>
-      
+
       <Text style={styles.topic2}>Create account</Text>
 
       <Text style={styles.topic}>What's your name?</Text>
