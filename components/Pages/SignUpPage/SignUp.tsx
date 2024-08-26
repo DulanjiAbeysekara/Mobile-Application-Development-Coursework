@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 
-export default function Index() {
+export default function SignUp() {
   return (
     <View style={styles.backgroundView}>
       <Image
