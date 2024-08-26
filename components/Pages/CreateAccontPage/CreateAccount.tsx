@@ -2,7 +2,7 @@ import React, { useState,useEffect  } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker'; 
 
-export default function Index() {
+export default function CreateAccount() {
   return (
     <View style={styles.backgroundView2}>
       <Text style={styles.topic2}>Create account</Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '600',
     top: 5,
-    left: 140,
+    left: 124,
   },
   topic: {
     fontSize: 20,
@@ -73,3 +73,4 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 });
+

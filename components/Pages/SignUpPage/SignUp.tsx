@@ -1,7 +1,11 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Pressable } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-export default function SignUp() {
+export default function SignUp()  {
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.backgroundView}>
 
@@ -47,10 +51,11 @@ export default function SignUp() {
         <Text style={styles.appleText}>Continue with Apple</Text>
       </TouchableOpacity>
 
-      <Text style={styles.loginText}>
-       Login
-      </Text>
-
+      <Pressable 
+        onPress={() => navigation.navigate('CreateAccount-Page')
+        }>
+        <Text style={styles.loginText}>Login</Text>
+      </Pressable>
     </View>
   );
 }
@@ -133,7 +138,7 @@ const styles = StyleSheet.create({
   facebookLogo: {
     width: 20,
     height: 20,
-    right:25,
+    right:24,
   },
 
   appleBtn: {
@@ -154,7 +159,7 @@ const styles = StyleSheet.create({
   appleLogo: {
     width: 20,
     height: 20,
-    right:36,
+    right:38,
   },
 
   loginText: {
