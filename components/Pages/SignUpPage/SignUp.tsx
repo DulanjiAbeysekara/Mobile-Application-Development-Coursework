@@ -4,10 +4,12 @@ import React from 'react';
 export default function SignUp() {
   return (
     <View style={styles.backgroundView}>
-      <Image
-        style={styles.spotifyLogo}
-        source={require('../assets/images/Spotify_Primary_Logo_RGB_White.png')}
+
+     <Image
+      style={styles.spotifyLogo}
+      source={require('../../../assets/images/Spotify_Primary_Logo_RGB_White.png')}
       />
+
       
       <Text style={styles.text}>
         Millions of songs.
@@ -24,7 +26,7 @@ export default function SignUp() {
       <TouchableOpacity style={[styles.button, styles.googleBtn]}>
         <Image
           style={styles.googleLogo}
-          source={require('../assets/images/google.png')}
+          source={require('../../../assets/images/google.png')}
         />
         <Text style={styles.googleText}>Continue with Google</Text>
       </TouchableOpacity>
@@ -32,7 +34,7 @@ export default function SignUp() {
       <TouchableOpacity style={[styles.button, styles.facebookBtn]}>
         <Image
           style={styles.facebookLogo}
-          source={require('../assets/images/facebook (1).png')}
+          source={require('../../../assets/images/facebook (1).png')}
         />
         <Text style={styles.facebookText}>Continue with Facebook</Text>
       </TouchableOpacity>
@@ -40,7 +42,7 @@ export default function SignUp() {
       <TouchableOpacity style={[styles.button, styles.appleBtn]}>
         <Image
           style={styles.appleLogo}
-          source={require('../assets/images/apple.png')}
+          source={require('../../../assets/images/apple.png')}
         />
         <Text style={styles.appleText}>Continue with Apple</Text>
       </TouchableOpacity>
@@ -55,10 +57,10 @@ export default function SignUp() {
 
 const styles = StyleSheet.create({
   backgroundView: {
-    flex: 1,
+    flex: 1,  
     alignItems: 'center',
-    margin: 10,
     backgroundColor: 'black',
+    justifyContent: 'center',
   },
   spotifyLogo: {
     width: 50,
@@ -160,5 +162,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginTop:8,
+   
   }
 });

@@ -10,7 +10,10 @@ const Stack = createStackNavigator();
 export default function Index() { 
   return (
     <NavigationContainer independent={true}>
-      <Stack.Navigator initialRouteName='SignUpPage'>
+      <Stack.Navigator 
+        initialRouteName='SignUpPage' 
+        screenOptions={{ headerShown: false }}  // Apply headerShown: false globally
+      >
         <Stack.Screen 
           name='SignUpPage' 
           component={SignUpPage} 
@@ -25,12 +28,3 @@ export default function Index() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000000",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
