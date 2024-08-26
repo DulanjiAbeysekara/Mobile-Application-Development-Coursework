@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image, TextInput,TouchableOpacity } from 'react
 import React, { useMemo, useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 
-export default function Index() {
+export default function Name() {
   const radioButtons = useMemo(
     () => [
       {
@@ -23,7 +23,7 @@ export default function Index() {
     <View style={styles.backgroundView2}>
       <Image
         style={styles.spotifyLogo}
-        source={require('../assets/images/left.png')}
+        source={require('../../../assets/images/left.png')}
       />
       <Text style={styles.topic2}>Create account</Text>
 
@@ -173,3 +173,4 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 });
+

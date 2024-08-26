@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
+import { useNavigation } from '@react-navigation/native';
 
 const data = [
   { label: 'Male', value: '1' },
@@ -12,7 +13,7 @@ const DropdownComponent = () => {
   const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(false);
 
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -28,7 +29,7 @@ const DropdownComponent = () => {
         maxHeight={300}
         labelField="label"
         valueField="value"
-        placeholder="Gender"
+        placeholder={!isFocus ? 'Gender' : '...'}
         value={value}
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
@@ -39,7 +40,8 @@ const DropdownComponent = () => {
       />
       <TouchableOpacity 
         style={styles.nextBtn1}
-     
+        onPress={() => navigation.navigate('Name-Page')}
+        disabled={!value} 
       >
         <Text style={styles.nextBtnText}>Next</Text>
       </TouchableOpacity>
@@ -79,7 +81,6 @@ const styles = StyleSheet.create({
   iconStyle: {
     width: 20,
     height: 20,
-    backgroundColor: 'black',
   },
   inputSearchStyle: {
     height: 40,
