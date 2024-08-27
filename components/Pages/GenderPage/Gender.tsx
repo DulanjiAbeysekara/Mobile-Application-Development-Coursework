@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Pressable, Image } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import { useNavigation } from '@react-navigation/native';
 
@@ -17,8 +17,16 @@ const DropdownComponent = () => {
 
   return (
     <View style={styles.container}>
+      <Pressable onPress={() => navigation.navigate('CreateAccount-Page')}>
+        <Image
+          style={styles.spotifyLogo}
+          source={require('../../../assets/images/left.png')}
+        />
+      </Pressable>
+
       <Text style={styles.topic2}>Create account</Text>
       <Text style={styles.topic}>What's your gender?</Text>
+
       <Dropdown
         style={[styles.dropdown, isFocus && { borderColor: 'grey' }]}
         placeholderStyle={styles.placeholderStyle}
@@ -38,6 +46,7 @@ const DropdownComponent = () => {
           setIsFocus(false);
         }}
       />
+
       <TouchableOpacity 
         style={styles.nextBtn1}
         onPress={() => navigation.navigate('Name-Page')}
@@ -55,9 +64,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    margin: 10,
+    justifyContent: 'flex-start',
     backgroundColor: 'black',
+    paddingTop: 50, 
   },
   dropdown: {
     height: 40,
@@ -67,7 +76,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     color: 'white',
-    marginTop: 10,
+    marginTop: 20, 
     backgroundColor: '#848884',
   },
   placeholderStyle: {
@@ -91,14 +100,16 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: 10,
+    bottom: 40, 
+    // marginTop: 20, 
   },
   topic: {
     fontSize: 20,
     color: 'white',
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: 25,
+    bottom: -2,
+    right:70
   },
   nextBtn1: {
     paddingVertical: 10,
@@ -107,10 +118,19 @@ const styles = StyleSheet.create({
     width: 75,
     alignItems: 'center',
     backgroundColor: 'white',
-    marginTop: 20,
+    marginTop: 100,
+  
   },
   nextBtnText: {
     fontWeight: 'bold',
     color: 'black',
+    
+  },
+  spotifyLogo: {
+    width: 30,
+    height: 30,
+    position: 'absolute',
+    top: -47,
+    left: -180, 
   },
 });
