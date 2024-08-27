@@ -52,17 +52,23 @@ export default function Name() {
 
       <Text style={styles.agreementText}>
         To learn more about how Spotify collects, uses, shares and protects
-        your personal data, please see the Spotify Privacy Policy.
       </Text>
+
+      <Text style={styles.agreementText1}>
+         your personal data, please see the Spotify Privacy Policy.
+      </Text>
+
       <Text style={styles.linkText}>Privacy Policy</Text>
 
       <Text style={styles.agreementText}>
         I would prefer not to receive marketing messages from Spotify.
       </Text>
 
-      <Text style={styles.agreementText}>Share my registration data with Spotify’s content providers for
-        <br></br> marketing purposes.</Text>
-
+      <Text style={styles.agreementText}>
+       Share my registration data with Spotify’s content providers for
+      </Text>
+      <Text style={styles.agreementText3}> marketing purposes.</Text>
+      
       <RadioGroup
         radioButtons={radioButtons}
         onPress={setSelectedId}
@@ -83,7 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    margin: 10,
+    // margin: 10,
     backgroundColor: 'black',
   },
   spotifyLogo: {
@@ -162,9 +168,27 @@ const styles = StyleSheet.create({
     left: 24,
     top: 15,
   },
+  agreementText1:{
+    fontSize: 10,
+    color: 'white',
+    textAlign: 'left',
+    fontWeight: '300',
+    marginBottom: 25,
+    left: 24,
+    top: -7,
+  },
+  agreementText3:{
+    fontSize: 10,
+    color: 'white',
+    textAlign: 'left',
+    fontWeight: '300',
+    marginBottom: 25,
+    left: 22,
+    top: -7,
+  },
   radioButtonContainer: {
-    left: 300,
-    marginTop: -80,
+    left: 325,
+    marginTop: -103,
   },
 
   nextBtn1: {
@@ -176,11 +200,11 @@ const styles = StyleSheet.create({
     marginTop: 85,
     backgroundColor: 'white',
     fontWeight: 'bold',
-    left: 100,
+    left: 109,
   },
   nextBtnText: {
     fontWeight: 'bold',
     color: 'black',
+    
   },
 });
-
