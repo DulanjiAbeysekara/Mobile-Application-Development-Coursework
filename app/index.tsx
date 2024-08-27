@@ -5,7 +5,7 @@ import SignUpPage from '@/components/Pages/SignUpPage/SignUp'
 import GenderPage from '@/components/Pages/GenderPage/Gender';
 import CreateAccount from '@/components/Pages/CreateAccontPage/CreateAccount';
 import Name from '@/components/Pages/NamePage/Name';
-import HomePage from '@/components/Pages/HomePage/HomePage';
+import HomePage from '@/app/(tabs)/HomePage';
 
 const Stack = createStackNavigator(); 
 
