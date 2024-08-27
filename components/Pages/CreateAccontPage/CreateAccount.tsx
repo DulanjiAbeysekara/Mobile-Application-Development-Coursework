@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Platform } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Platform,Pressable ,Image} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { router } from 'expo-router';
 import { useNavigation } from '@react-navigation/native';
+
 
 export default function CreateAccount() {
   const [date, setDate] = useState(new Date());
@@ -22,6 +23,14 @@ export default function CreateAccount() {
 
   return (
     <View style={styles.backgroundView2}>
+
+       <Pressable onPress={() => navigation.navigate('SignUp-Page')}>
+        <Image
+          style={styles.spotifyLogo}
+          source={require('../../../assets/images/left.png')}
+        />
+      </Pressable>
+
     <Text style={styles.topic2}>Create account</Text>
 
     <Text style={styles.topic}>What's your date of birth?</Text>
@@ -44,7 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 10,
+    // margin: 10,
     backgroundColor: 'black',
   },
   topic2: {
@@ -52,14 +61,15 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: 10,
+    bottom: 233,
   },
   topic: {
     fontSize: 20,
     color: 'white',
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: 25,
+    bottom:180,
+    right:40
   },
   inputFeild: {
     height: 40,
@@ -69,7 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     color: 'white',
-    marginTop: 10,
+    top: -165,
     backgroundColor: '#848884',
   },
   nextBtn1: {
@@ -78,11 +88,18 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 75,
     alignItems: 'center',
-    marginTop: 20,
+    top: -65,
     backgroundColor: 'white',
   },
   nextBtnText: {
     fontWeight: 'bold',
     color: 'black',
   },
+  spotifyLogo:{
+    width: 30,
+    height: 30,
+    position: 'absolute',
+    top: -240,
+    left: -178, 
+  }
 });
