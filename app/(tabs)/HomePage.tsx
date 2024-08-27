@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <View style={styles.backgroundView}>
       
-      {/* Circle Buttons */}
+     
       <View style={styles.circleContainer}>
         <View style={styles.circle}>
           <Text style={styles.circleText}>D</Text>
@@ -20,24 +20,39 @@ export default function HomePage() {
         </View>
       </View>
 
-      {/* Icon Buttons */}
+      
       <View style={styles.iconContainer}>
-        <Image
-          style={styles.home}
-          source={require('../../assets/images/home (4).png')}
-        />
-        <Image
-          style={styles.home}
-          source={require('../../assets/images/search (5).png')}
-        />
-        <Image
-          style={styles.home}
-          source={require('../../assets/images/music-album.png')}
-        />
-        <Image
-          style={styles.home}
-          source={require('../../assets/images/Spotify_Primary_Logo_RGB_White.png')}
-        />
+        <View style={styles.iconWithText}>
+          <Image
+            style={styles.home}
+            source={require('../../assets/images/home (4).png')}
+          />
+          <Text style={styles.iconText}>Home</Text>
+        </View>
+
+        <View style={styles.iconWithText}>
+          <Image
+            style={styles.home}
+            source={require('../../assets/images/search (5).png')}
+          />
+          <Text style={styles.iconText}>Search</Text>
+        </View>
+
+        <View style={styles.iconWithText}>
+          <Image
+            style={styles.home}
+            source={require('../../assets/images/music-album.png')}
+          />
+          <Text style={styles.iconText}>Your Library</Text>
+        </View>
+
+        <View style={styles.iconWithText}>
+          <Image
+            style={styles.home}
+            source={require('../../assets/images/Spotify_Primary_Logo_RGB_White.png')}
+          />
+          <Text style={styles.iconText}>Premium</Text>
+        </View>
       </View>
     </View>
   );
@@ -56,7 +71,7 @@ const styles = StyleSheet.create({
     width: '80%',
     position: 'absolute',
     top: 20, 
-    right:55
+    right: 55,
   },
   circle: {
     width: 45,
@@ -65,7 +80,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDA0DD',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 10, // Space between circles
+    marginRight: 10, 
   },
   circle1: {
     width: 60,
@@ -87,12 +102,12 @@ const styles = StyleSheet.create({
   circleText: {
     color: 'black',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: 300,
   },
   circleText1: {
     color: 'white',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: 300,
   },
   iconContainer: {
     flexDirection: 'row',
@@ -101,8 +116,17 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 50, 
   },
+  iconWithText: {
+    alignItems: 'center',  
+    marginTop: 25, 
+  },
   home: {
     width: 25,
     height: 25,
+  },
+  iconText: {
+    color: 'white',
+   
+    fontSize: 10,  
   },
 });
