@@ -17,20 +17,37 @@ const Tab = createBottomTabNavigator();
 function MainTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomePage} />
-      <Tab.Screen name="Search" component={Search} />
-      <Tab.Screen name="Library" component={Library} />
-      <Tab.Screen name="Premium" component={Premium} />
+      <Tab.Screen 
+        name="Home" 
+        component={HomePage} 
+        options={{ headerShown: false }} 
+      />
+      <Tab.Screen 
+        name="Search" 
+        component={Search} 
+        options={{ headerShown: false }} 
+      />
+      <Tab.Screen 
+        name="Library" 
+        component={Library} 
+        options={{ headerShown: false }} 
+      />
+      <Tab.Screen 
+        name="Premium" 
+        component={Premium} 
+        options={{ headerShown: false }} 
+      />
     </Tab.Navigator>
   );
 }
+
 
 export default function Index() {
   return (
     <NavigationContainer independent={true}>
       <Stack.Navigator 
         initialRouteName='SignUp-Page' 
-        screenOptions={{ headerShown: false }} 
+        screenOptions={{ headerShown: false }}  
       >
         <Stack.Screen 
           name='SignUp-Page' 
