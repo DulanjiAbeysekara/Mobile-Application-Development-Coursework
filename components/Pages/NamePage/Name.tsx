@@ -77,7 +77,7 @@ export default function Name() {
       />
 
         <TouchableOpacity style={styles.nextBtn1}
-        onPress={() => navigation.navigate('Home-Page')}>
+        onPress={() => navigation.navigate('MainTabs')}>
         <Text style={styles.nextBtnText}>Create account</Text>
       </TouchableOpacity>
     </View>

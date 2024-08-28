@@ -21,7 +21,7 @@ export default function HomePage() {
       </View>
 
       
-      <View style={styles.iconContainer}>
+      {/* <View style={styles.iconContainer}>
         <View style={styles.iconWithText}>
           <Image
             style={styles.home}
@@ -53,7 +53,7 @@ export default function HomePage() {
           />
           <Text style={styles.iconText}>Premium</Text>
         </View>
-      </View>
+      </View> */}
     </View>
   );
 }
