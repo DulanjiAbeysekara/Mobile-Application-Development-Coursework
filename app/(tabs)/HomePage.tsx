@@ -1,11 +1,9 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 
 export default function HomePage() {
   return (
     <View style={styles.backgroundView}>
-      
-     
       <View style={styles.circleContainer}>
         <View style={styles.circle}>
           <Text style={styles.circleText}>D</Text>
@@ -20,40 +18,18 @@ export default function HomePage() {
         </View>
       </View>
 
-      
-      {/* <View style={styles.iconContainer}>
-        <View style={styles.iconWithText}>
-          <Image
-            style={styles.home}
-            source={require('../../assets/images/home (4).png')}
-          />
-          <Text style={styles.iconText}>Home</Text>
-        </View>
+      <View style={styles.labelBar}>
+        <Text style={styles.label1}>Your top mixes</Text>
+      </View>
 
-        <View style={styles.iconWithText}>
-          <Image
-            style={styles.home}
-            source={require('../../assets/images/search (5).png')}
-          />
-          <Text style={styles.iconText}>Search</Text>
-        </View>
-
-        <View style={styles.iconWithText}>
-          <Image
-            style={styles.home}
-            source={require('../../assets/images/music-album.png')}
-          />
-          <Text style={styles.iconText}>Your Library</Text>
-        </View>
-
-        <View style={styles.iconWithText}>
-          <Image
-            style={styles.home}
-            source={require('../../assets/images/Spotify_Primary_Logo_RGB_White.png')}
-          />
-          <Text style={styles.iconText}>Premium</Text>
-        </View>
-      </View> */}
+      <View style={styles.firstContainer}>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+      </View>
     </View>
   );
 }
@@ -63,15 +39,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start', // Start from the top
+    paddingTop: 15, // Add padding to avoid overlap with status bar
   },
   circleContainer: {
     flexDirection: 'row',
-    justifyContent: 'flex-start', 
+    justifyContent: 'flex-start',
     width: '80%',
-    position: 'absolute',
-    top: 20, 
-    right: 55,
+    marginBottom: 30, 
+    marginLeft:-30
   },
   circle: {
     width: 45,
@@ -80,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDA0DD',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 10, 
+    marginRight: 10,
   },
   circle1: {
     width: 60,
@@ -102,31 +78,29 @@ const styles = StyleSheet.create({
   circleText: {
     color: 'black',
     fontSize: 18,
-    fontWeight: 300,
+    fontWeight: 'bold',
   },
   circleText1: {
     color: 'white',
     fontSize: 18,
-    fontWeight: 300,
+    fontWeight: '300',
   },
-  iconContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  labelBar: {
     width: '80%',
-    position: 'absolute',
-    bottom: 50, 
+    paddingTop: 80, 
   },
-  iconWithText: {
-    alignItems: 'center',  
-    marginTop: 25, 
-  },
-  home: {
-    width: 25,
-    height: 25,
-  },
-  iconText: {
+  label1: {
     color: 'white',
-   
-    fontSize: 10,  
+    fontSize: 28, 
+    fontWeight: 'bold',
+    top:70,
+    left:-15,
   },
+  firstContainer:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    width:50,
+    height:50,
+    backgroundColor:'gray' 
+  }
 });

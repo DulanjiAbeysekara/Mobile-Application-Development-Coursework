@@ -24,12 +24,12 @@ function MainTabs() {
 
         tabBarLabelStyle: {
           fontSize: 12,
-          paddingBottom: 5,
+          // paddingBottom: 5,
           fontWeight: 'bold',
         
         },
         tabBarStyle: {
-          backgroundColor: 'black', // Set the background color to black
+          backgroundColor: 'black',
         },
         
       }}>
@@ -39,7 +39,7 @@ function MainTabs() {
         options={{ 
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <Entypo name="home" size={25} color={focused ? 'white' : 'white'} />
+            <Entypo name="home" size={25} color={focused ? 'white' : 'grey'} />
           ),
         }}/>
 
@@ -49,7 +49,7 @@ function MainTabs() {
         options={{ 
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <FontAwesome name="search" size={25} color={focused ? 'white' : 'white'} />
+            <FontAwesome name="search" size={25} color={focused ? 'white' : 'grey'} />
           ),
         }}/>
 
@@ -59,7 +59,7 @@ function MainTabs() {
         options={{ 
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <Ionicons name="library-outline" size={25} color={focused ? 'white' : 'white'} />
+            <Ionicons name="library-outline" size={25} color={focused ? 'white' : 'grey'} />
           ),
         }}/>
 
@@ -69,7 +69,7 @@ function MainTabs() {
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <Entypo name='spotify-with-circle' size={25} color={focused ? 'white' : 'white'} />
+            <Entypo name='spotify-with-circle' size={25} color={focused ? 'white' : 'grey'} />
           ),
         }}/>
     </Tab.Navigator>
