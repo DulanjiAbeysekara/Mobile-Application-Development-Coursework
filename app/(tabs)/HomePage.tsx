@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet,Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import React from 'react';
 
 export default function HomePage() {
@@ -23,75 +23,68 @@ export default function HomePage() {
       </View>
 
       <View style={styles.gridContainer}>
-
         <View style={styles.gridItem}>
-            <Image 
-            style={styles.pic}  
-            source={require('../../assets/images/charitha.jpeg')}    
-                  />
-            <Text
-            style={styles.songsDeatils}>
-              Cahritha Attalage Mix
-            </Text>
+          <Image
+            style={styles.pic}
+            source={require('../../assets/images/charitha.jpeg')}
+          />
+          <Text style={styles.songsDeatils}>Charitha Attalage Mix</Text>
         </View>
 
         <View style={styles.gridItem}>
-           <Image 
-            style={styles.pic}  
-            source={require('../../assets/images/ridma1.jpeg')}    
-                  />
-            <Text
-            style={styles.songsDeatils}>
-             Ridma Weerawarde...
-            </Text>
-        </View>
-
-           
-        <View style={styles.gridItem}>
-            <Image 
-            style={styles.pic}  
-            source={require('../../assets/images/ridma 2.jpeg')}    
-                  />
-            <Text
-            style={styles.songsDeatils}>
-            Sobana
-            </Text>
+          <Image
+            style={styles.pic}
+            source={require('../../assets/images/ridma1.jpeg')}
+          />
+          <Text style={styles.songsDeatils}>Ridma Weerawarde...</Text>
         </View>
 
         <View style={styles.gridItem}>
-        <Image 
-            style={styles.pic}  
-            source={require('../../assets/images/yeh jawani.jpeg')}    
-                  />
-            <Text
-            style={styles.songsDeatils}>
-            re kabira maan ja
-            </Text>
+          <Image
+            style={styles.pic}
+            source={require('../../assets/images/ridma 2.jpeg')}
+          />
+          <Text style={styles.songsDeatils}>Sobana</Text>
         </View>
 
         <View style={styles.gridItem}>
-            <Image 
-            style={styles.pic}  
-            source={require('../../assets/images/b&s.jpeg')}    
-                  />
-            <Text
-            style={styles.songsDeatils}>
-            2000 Mix
-            </Text>
+          <Image
+            style={styles.pic}
+            source={require('../../assets/images/yeh jawani.jpeg')}
+          />
+          <Text style={styles.songsDeatils}>Re Kabira Maan Ja</Text>
         </View>
 
         <View style={styles.gridItem}>
-        <Image 
-            style={styles.pic}  
-            source={require('../../assets/images/dilu.jpeg')}    
-                  />
-            <Text
-            style={styles.songsDeatils}>
-            Dilu Beats Mix
-            </Text>
+          <Image
+            style={styles.pic}
+            source={require('../../assets/images/b&s.jpeg')}
+          />
+          <Text style={styles.songsDeatils}>2000 Mix</Text>
         </View>
 
+        <View style={styles.gridItem}>
+          <Image
+            style={styles.pic}
+            source={require('../../assets/images/dilu.jpeg')}
+          />
+          <Text style={styles.songsDeatils}>Dilu Beats Mix</Text>
+        </View>
       </View>
+
+      {/* ------------------------------------Mix Container-------------------------- */}
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.topMixeContainer}>
+        <View 
+        style={styles.mixPic}>
+        <Image 
+        style={styles.sideScrollPic}
+        />
+        </View>
+        <View style={styles.mixPic}></View>
+        <View style={styles.mixPic}></View>
+        <View style={styles.mixPic}></View>
+        <View style={styles.mixPic}></View>
+      </ScrollView>
     </View>
   );
 }
@@ -169,22 +162,34 @@ const styles = StyleSheet.create({
     width: '49%',
     height: 50,
     backgroundColor: '#353839',
-    paddingLeft:5,
-    marginBottom: 8, 
+    paddingLeft: 5,
+    marginBottom: 8,
     borderRadius: 5,
   },
-  pic:{
-    width:50,
-    height:50,
-    left:-5,
+  pic: {
+    width: 50,
+    height: 50,
+    left: -5,
     borderRadius: 5,
   },
-  songsDeatils:{
-    fontSize:10,
-    color:'white',
-    bottom:30,
-    left:52,
-   fontWeight:'800',
-  //  fontFamily:'Times New Romen'
+  songsDeatils: {
+    fontSize: 10,
+    color: 'white',
+    bottom: 30,
+    left: 52,
+    fontWeight: '800',
+  },
+  topMixeContainer: {
+    marginTop: 70, 
+  },
+  mixPic: {
+    height: 185,
+    width: 185,
+    backgroundColor: '#353839',
+    marginRight: 15, 
+    borderRadius: 10, 
+  },
+  sideScrollPic:{
+    
   }
 });
