@@ -25,28 +25,70 @@ export default function HomePage() {
       <View style={styles.gridContainer}>
 
         <View style={styles.gridItem}>
-            <Image style={styles.pic}      
+            <Image 
+            style={styles.pic}  
+            source={require('../../assets/images/charitha.jpeg')}    
                   />
+            <Text
+            style={styles.songsDeatils}>
+              Cahritha Attalage Mix
+            </Text>
         </View>
 
         <View style={styles.gridItem}>
+           <Image 
+            style={styles.pic}  
+            source={require('../../assets/images/ridma1.jpeg')}    
+                  />
+            <Text
+            style={styles.songsDeatils}>
+             Ridma Weerawarde...
+            </Text>
+        </View>
 
+           
+        <View style={styles.gridItem}>
+            <Image 
+            style={styles.pic}  
+            source={require('../../assets/images/ridma 2.jpeg')}    
+                  />
+            <Text
+            style={styles.songsDeatils}>
+            Sobana
+            </Text>
         </View>
 
         <View style={styles.gridItem}>
-
+        <Image 
+            style={styles.pic}  
+            source={require('../../assets/images/yeh jawani.jpeg')}    
+                  />
+            <Text
+            style={styles.songsDeatils}>
+            re kabira maan ja
+            </Text>
         </View>
 
         <View style={styles.gridItem}>
-
+            <Image 
+            style={styles.pic}  
+            source={require('../../assets/images/b&s.jpeg')}    
+                  />
+            <Text
+            style={styles.songsDeatils}>
+            2000 Mix
+            </Text>
         </View>
 
         <View style={styles.gridItem}>
-
-        </View>
-
-        <View style={styles.gridItem}>
-
+        <Image 
+            style={styles.pic}  
+            source={require('../../assets/images/dilu.jpeg')}    
+                  />
+            <Text
+            style={styles.songsDeatils}>
+            Dilu Beats Mix
+            </Text>
         </View>
 
       </View>
@@ -132,6 +174,17 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   pic:{
-    
+    width:50,
+    height:50,
+    left:-5,
+    borderRadius: 5,
+  },
+  songsDeatils:{
+    fontSize:10,
+    color:'white',
+    bottom:30,
+    left:52,
+   fontWeight:'800',
+  //  fontFamily:'Times New Romen'
   }
 });
