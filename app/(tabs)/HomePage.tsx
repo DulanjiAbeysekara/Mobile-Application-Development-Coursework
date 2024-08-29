@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Image } from 'react-native';
 import React from 'react';
 
 export default function HomePage() {
@@ -22,13 +22,33 @@ export default function HomePage() {
         <Text style={styles.label1}>Your top mixes</Text>
       </View>
 
-      <View style={styles.firstContainer}>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
+      <View style={styles.gridContainer}>
+
+        <View style={styles.gridItem}>
+            <Image style={styles.pic}      
+                  />
+        </View>
+
+        <View style={styles.gridItem}>
+
+        </View>
+
+        <View style={styles.gridItem}>
+
+        </View>
+
+        <View style={styles.gridItem}>
+
+        </View>
+
+        <View style={styles.gridItem}>
+
+        </View>
+
+        <View style={styles.gridItem}>
+
+        </View>
+
       </View>
     </View>
   );
@@ -39,15 +59,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     alignItems: 'center',
-    justifyContent: 'flex-start', // Start from the top
-    paddingTop: 15, // Add padding to avoid overlap with status bar
+    justifyContent: 'flex-start',
+    paddingTop: 15,
   },
   circleContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     width: '80%',
-    marginBottom: 30, 
-    marginLeft:-30
+    marginBottom: 30,
+    marginLeft: -30,
   },
   circle: {
     width: 45,
@@ -87,20 +107,31 @@ const styles = StyleSheet.create({
   },
   labelBar: {
     width: '80%',
-    paddingTop: 80, 
+    paddingTop: 80,
   },
   label1: {
     color: 'white',
-    fontSize: 28, 
+    fontSize: 28,
     fontWeight: 'bold',
-    top:70,
-    left:-15,
+    top: 110,
+    left: -15,
   },
-  firstContainer:{
-    alignItems: 'center',
-    justifyContent: 'center',
-    width:50,
-    height:50,
-    backgroundColor:'gray' 
+  gridContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginTop: -110,
+    paddingHorizontal: 9,
+  },
+  gridItem: {
+    width: '49%',
+    height: 50,
+    backgroundColor: '#353839',
+    paddingLeft:5,
+    marginBottom: 8, 
+    borderRadius: 5,
+  },
+  pic:{
+    
   }
 });
