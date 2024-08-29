@@ -1,24 +1,41 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { View, Text } from 'react-native'
+import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Tabs } from 'expo-router';
 
-export default function TabLayout() {
+export default function _layout() {
+
+
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs screenOptions={{
+      headerShown: false,
+    }}>
+
       <Tabs.Screen
-        name="index"
+        name="Home"
         options={{
-          title: 'Home',
-          tabBarLabel: '', // This removes the label
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
+          
+       }}/>
+      <Tabs.Screen
+        name="Search"
+        options={{
+          
+       }}/>
+
+      <Tabs.Screen
+        name="Library"
+        options={{
+          
         }}
       />
-      <Tabs.Screen
-        name="settings"
+
+        <Tabs.Screen
+        name="Premium"
         options={{
-          title: 'Settings',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          
         }}
       />
+      
     </Tabs>
   );
 }
