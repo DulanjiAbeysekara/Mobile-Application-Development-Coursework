@@ -1,100 +1,211 @@
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import React from 'react';
+import { Entypo } from '@expo/vector-icons';
 
 export default function HomePage() {
   return (
-    <View style={styles.backgroundView}>
-      <View style={styles.circleContainer}>
-        <View style={styles.circle}>
-          <Text style={styles.circleText}>D</Text>
+    <ScrollView style={styles.scrollContainer}>
+      <View style={styles.backgroundView}>
+        <View style={styles.circleContainer}>
+          <View style={styles.circle}>
+            <Text style={styles.circleText}>D</Text>
+          </View>
+
+          <View style={styles.circle1}>
+            <Text style={styles.circleText}>All</Text>
+          </View>
+
+          <View style={styles.circle2}>
+            <Text style={styles.circleText1}>Music</Text>
+          </View>
         </View>
 
-        <View style={styles.circle1}>
-          <Text style={styles.circleText}>All</Text>
+        <View style={styles.labelBar}>
+          <Text style={styles.label1}>Your top mixes</Text>
         </View>
 
-        <View style={styles.circle2}>
-          <Text style={styles.circleText1}>Music</Text>
+        <View style={styles.gridContainer}>
+          <View style={styles.gridItem}>
+            <Image
+              style={styles.pic}
+              source={require('../../assets/images/charitha.jpeg')}
+            />
+            <Text style={styles.songsDeatils}>Charitha Attalage Mix</Text>
+          </View>
+
+          <View style={styles.gridItem}>
+            <Image
+              style={styles.pic}
+              source={require('../../assets/images/ridma1.jpeg')}
+            />
+            <Text style={styles.songsDeatils}>Ridma Weerawarde...</Text>
+          </View>
+
+          <View style={styles.gridItem}>
+            <Image
+              style={styles.pic}
+              source={require('../../assets/images/ridma 2.jpeg')}
+            />
+            <Text style={styles.songsDeatils}>Sobana</Text>
+          </View>
+
+          <View style={styles.gridItem}>
+            <Image
+              style={styles.pic}
+              source={require('../../assets/images/yeh jawani.jpeg')}
+            />
+            <Text style={styles.songsDeatils}>Re Kabira Maan Ja</Text>
+          </View>
+
+          <View style={styles.gridItem}>
+            <Image
+              style={styles.pic}
+              source={require('../../assets/images/b&s.jpeg')}
+            />
+            <Text style={styles.songsDeatils}>2000 Mix</Text>
+          </View>
+
+          <View style={styles.gridItem}>
+            <Image
+              style={styles.pic}
+              source={require('../../assets/images/dilu.jpeg')}
+            />
+            <Text style={styles.songsDeatils}>Dilu Beats Mix</Text>
+          </View>
         </View>
+
+        {/* ------------------------------------------------your top mixes--------------------------------- */}
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.topMixeContainer}>
+
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/raini.jpeg')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+            <Text style={styles.aritstsText}>Raini Charuka</Text>
+          </View>
+          
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/la signore.jpeg')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+          </View>
+
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/tehan perera.jpeg')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+          </View>
+
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/ed sheeran.jpeg')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+          </View>
+
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/musical-note.png')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+          </View>
+
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/musical-note.png')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+          </View>
+
+          <View style={styles.mixPic}>
+            <Image 
+              style={styles.sideScrollPic}
+              source={require('../../assets/images/musical-note.png')}
+            />
+            <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+          </View>
+        </ScrollView>
+
+        {/* --------------------------Your Favourite Artist------------------------------- */}
+        <View style={styles.labelBar2}>
+          <Text style={styles.label2}>Your favourite artists</Text>
+        </View>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.topMixeContainer}>
+
+          <View style={styles.mixPic2}>
+            <Image 
+              style={styles.sideScrollPic2}
+              source={require('../../assets/images/raini.jpeg')}
+            />
+            <Text style={styles.artistsName}>Raini Charuka</Text>
+          </View>
+
+          <View style={styles.mixPic2}>
+            <Image 
+              style={styles.sideScrollPic2}
+              source={require('../../assets/images/dilu.jpeg')}
+            />
+            <Text style={styles.artistsName}>Dilu Beats</Text>
+          </View>
+
+          <View style={styles.mixPic2}>
+            <Image 
+              style={styles.sideScrollPic2}
+              source={require('../../assets/images/gayya.jpeg')}
+            />
+            <Text style={styles.artistsName}>Gayya</Text>
+          </View>
+
+          <View style={styles.mixPic2}>
+            <Image 
+              style={styles.sideScrollPic2}
+              source={require('../../assets/images/ravi.jpeg')}
+            />
+            <Text style={styles.artistsName}>Ravi Jay</Text>
+          </View>
+
+          <View style={styles.mixPic2}>
+            <Image 
+              style={styles.sideScrollPic2}
+              source={require('../../assets/images/ridma 2.jpeg')}
+            />
+            <Text style={styles.artistsName}>Ridma Weerawardana</Text>
+          </View>
+
+          <View style={styles.mixPic2}>
+            <Image 
+              style={styles.sideScrollPic2}
+              source={require('../../assets/images/charitha.jpeg')}
+            />
+            <Text style={styles.artistsName}>Charitha Attalage</Text>
+          </View>
+
+        </ScrollView>
       </View>
-
-      <View style={styles.labelBar}>
-        <Text style={styles.label1}>Your top mixes</Text>
-      </View>
-
-      <View style={styles.gridContainer}>
-        <View style={styles.gridItem}>
-          <Image
-            style={styles.pic}
-            source={require('../../assets/images/charitha.jpeg')}
-          />
-          <Text style={styles.songsDeatils}>Charitha Attalage Mix</Text>
-        </View>
-
-        <View style={styles.gridItem}>
-          <Image
-            style={styles.pic}
-            source={require('../../assets/images/ridma1.jpeg')}
-          />
-          <Text style={styles.songsDeatils}>Ridma Weerawarde...</Text>
-        </View>
-
-        <View style={styles.gridItem}>
-          <Image
-            style={styles.pic}
-            source={require('../../assets/images/ridma 2.jpeg')}
-          />
-          <Text style={styles.songsDeatils}>Sobana</Text>
-        </View>
-
-        <View style={styles.gridItem}>
-          <Image
-            style={styles.pic}
-            source={require('../../assets/images/yeh jawani.jpeg')}
-          />
-          <Text style={styles.songsDeatils}>Re Kabira Maan Ja</Text>
-        </View>
-
-        <View style={styles.gridItem}>
-          <Image
-            style={styles.pic}
-            source={require('../../assets/images/b&s.jpeg')}
-          />
-          <Text style={styles.songsDeatils}>2000 Mix</Text>
-        </View>
-
-        <View style={styles.gridItem}>
-          <Image
-            style={styles.pic}
-            source={require('../../assets/images/dilu.jpeg')}
-          />
-          <Text style={styles.songsDeatils}>Dilu Beats Mix</Text>
-        </View>
-      </View>
-
-      {/* ------------------------------------Mix Container-------------------------- */}
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.topMixeContainer}>
-        <View 
-        style={styles.mixPic}>
-        <Image 
-        style={styles.sideScrollPic}
-        />
-        </View>
-        <View style={styles.mixPic}></View>
-        <View style={styles.mixPic}></View>
-        <View style={styles.mixPic}></View>
-        <View style={styles.mixPic}></View>
-      </ScrollView>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  backgroundView: {
+  scrollContainer: {
     flex: 1,
     backgroundColor: 'black',
+  },
+  backgroundView: {
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     paddingTop: 15,
   },
   circleContainer: {
@@ -180,16 +291,72 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   topMixeContainer: {
-    marginTop: 70, 
+    marginTop: 70,
   },
   mixPic: {
     height: 185,
     width: 185,
     backgroundColor: '#353839',
-    marginRight: 15, 
-    borderRadius: 10, 
+    marginRight: 15,
+    left: 15,
+    borderRadius: 10,
+    position: 'relative', // Ensure text is positioned relative to this container
   },
-  sideScrollPic:{
-    
-  }
+  sideScrollPic: {
+    height: 185,
+    width: 185,
+    borderRadius: 10,
+  },
+  iconSpotify: {
+    position: 'absolute',
+    bottom:150,
+    left: 10,
+  },
+  aritstsText: {
+    color: 'white',
+    fontSize: 14,
+    position: 'absolute',
+    bottom: 10, // Position text above the bottom of the image
+    left: 40,
+    fontWeight: 'bold',
+    width: '80%', // Ensure text fits within the container
+    textAlign: 'left',
+  },
+  labelBar2: {
+    width: '80%',
+    paddingTop: 70,
+  },
+  label2: {
+    color: 'white',
+    fontSize: 28,
+    fontWeight: 'bold',
+    top: 15,
+    left: -15,
+  },
+  mixPic2: {
+    height: 185,
+    width: 185,
+    backgroundColor: '#353839',
+    marginRight: 10,
+    borderRadius: 100,
+    left: 15,
+    bottom: 0,
+    position: 'relative', // Ensure text is positioned relative to this container
+  },
+  sideScrollPic2: {
+    height: 185,
+    width: 185,
+    borderRadius: 100,
+  },
+  artistsName: {
+    color: 'white',
+    fontSize: 14,
+    textAlign: 'center',
+    position: 'absolute',
+    bottom: 12, // Position text above the bottom of the image
+    left: 2,
+    marginBottom: 20,
+    width: '100%', // Ensure text fits within the container
+    fontWeight:'bold'
+  },
 });
