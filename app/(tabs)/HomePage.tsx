@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
     left: 15,
     borderRadius: 10,
-    position: 'relative', // Ensure text is positioned relative to this container
+    position: 'relative', 
   },
   sideScrollPic: {
     height: 185,
@@ -316,10 +316,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
     position: 'absolute',
-    bottom: 10, // Position text above the bottom of the image
+    bottom: 10,
     left: 40,
     fontWeight: 'bold',
-    width: '80%', // Ensure text fits within the container
+    width: '80%', 
     textAlign: 'left',
   },
   labelBar2: {
