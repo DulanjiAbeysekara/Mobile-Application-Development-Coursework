@@ -91,8 +91,11 @@ export default function HomePage() {
             <Image 
               style={styles.sideScrollPic}
               source={require('../../assets/images/la signore.jpeg')}
+             
             />
             <Entypo style={styles.iconSpotify} name='spotify-with-circle' size={24} color={'white'} />
+            <Text style={styles.aritstsText}> La Signore</Text>
+
           </View>
 
           <View style={styles.mixPic}>

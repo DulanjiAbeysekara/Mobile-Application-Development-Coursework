@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,13 +8,15 @@ import GenderPage from '@/components/Pages/GenderPage/Gender';
 import CreateAccount from '@/components/Pages/CreateAccontPage/CreateAccount';
 import Name from '@/components/Pages/NamePage/Name';
 import HomePage from '@/app/(tabs)/HomePage';
-import Search from '@/app/(tabs)/Search'; // Updated path
-import Library from '@/app/(tabs)/Library'; // Updated path
-import Premium from '@/app/(tabs)/Premium'; // Updated path
-import { Ionicons, FontAwesome, Entypo } from "@expo/vector-icons"; // Removed duplicate import
+import Search from '@/app/(tabs)/Search'; 
+import Library from '@/app/(tabs)/Library';
+import Premium from '@/app/(tabs)/Premium'; 
+import { Ionicons, FontAwesome, Entypo } from "@expo/vector-icons";
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
 
 function MainTabs() {
   return (
