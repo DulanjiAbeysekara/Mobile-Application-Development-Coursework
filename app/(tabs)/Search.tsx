@@ -7,7 +7,7 @@ const Search = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [text, onChangeText] = useState('');
 
-  // Define arrays of colors, images, and topics
+ 
   const colors = ['#FF6347', '#FFD700', '#00563B', '#87CEEB', '#FF69B4', '#20B2AA', '#FFA500', '#8A2BE2'];
   const images = [
     require('../../assets/images/music.jpeg'),
@@ -24,7 +24,9 @@ const Search = () => {
   return (
     <ScrollView style={styles.scrollContainer}>
       <View style={styles.backgroundView}>
+
         <View style={styles.circleContainer}>
+          
           <View style={styles.circle}>
             <Text style={styles.circleText}>D</Text>
           </View>
@@ -57,7 +59,6 @@ const Search = () => {
         <Text style={styles.text1}>Browse All</Text>
 
         <View style={styles.browserContainer}>
-          {/* Map through the colors, images, and topics arrays to create grid items */}
           {colors.map((color, index) => (
             <View key={index} style={[styles.gridItem, { backgroundColor: color }]}>
               <Image 
