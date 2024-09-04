@@ -39,6 +39,8 @@ const Search = () => {
 
       <AntDesign style={styles.icon} name="search1" size={24} color="gray" />
       </View>
+
+      <Text style={styles.text1}>Browse All</Text>
     </View>
   );
 };
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     width: '80%',
-    bottom: 205,
+    bottom: 190,
     marginLeft: -30,
   },
   circle: {
@@ -98,11 +100,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     textAlign: 'center',
     backgroundColor: 'white',
-    fontWeight:'500'
+    fontWeight:'500',
+    top:18
   },
   icon:{
     right:120,
-    bottom:36,
+    bottom:18,
+  },
+  text1:{
+    fontSize:22,
+    color:'white',
+    fontWeight:'bold',
+    right:105,
+    bottom:160,
   }
 });
 
